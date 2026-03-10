@@ -1,0 +1,9 @@
+Flask==3.1.0
+flask_file_explorer==0.1.1
+flask_sqlalchemy==3.1.1
+numpy==1.26.4
+opencv_python==4.11.0.86
+python-dotenv==1.1.0
+pywa==2.7.0
+Requests==2.32.3
+Werkzeug==3.1.3

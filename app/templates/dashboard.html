@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dashboard</h1>
+        </div>
+        <div class="buttons">
+            <a href="{{ url_for('camera_preview.index') }}" class="button">Camera Preview</a>
+            <a href="{{ url_for('flask_file_explorer.index') }}" class="button">File Editor</a>
+            <a href="{{ url_for('dashboard.logout') }}" class="button">Log Out</a>
+        </div>
+    </div>
+</body>
+</html>

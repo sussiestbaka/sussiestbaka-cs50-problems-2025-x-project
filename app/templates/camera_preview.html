@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='camera_preview.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Camera Preview</h1>
+        <img src="{{ url_for('camera_preview.video_feed') }}" height="480" width="640">
+        <a href="{{ url_for('dashboard.dashboard_view') }}" class="button">Back to Dashboard</a>
+        <a href="{{ url_for('camera_preview.whatsapp') }}" class="button">Send Photo to Whatsapp</a>
+    </div>
+</body>
+</html>

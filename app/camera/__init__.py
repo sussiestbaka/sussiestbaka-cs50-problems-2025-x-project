@@ -135,10 +135,11 @@ def gen_frames():
                 gpio_on_time = 0
 
             elif known_face_detected and not unknown_face_detected:
-                print("Known face detected! Activating GPIO pin.")
-                set_gpio_state(GPIO_PIN, 1)
-                gpio_on_time = time.time()
-                time.sleep(10)
+                if gpio_on_time == 0:
+                    print("Known face detected! Activating GPIO pin.")
+                    set_gpio_state(GPIO_PIN, 1)
+                    gpio_on_time = time.time()
+                    
 
             if gpio_on_time != 0 and time.time() - gpio_on_time >= 30:
                 set_gpio_state(GPIO_PIN, 0)

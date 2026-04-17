@@ -157,6 +157,7 @@ def index():
     return render_template('camera_preview.html')
 
 @camera_preview.route('/video_feed')
+@login_required
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 

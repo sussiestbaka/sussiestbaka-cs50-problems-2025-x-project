@@ -163,6 +163,7 @@ def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @camera_preview.route('/whatsapp')
+@login_required
 def whatsapp():
     # Capture one frame and send via WhatsApp
     success, frame = cap.read()
